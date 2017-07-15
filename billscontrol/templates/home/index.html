@@ -1,0 +1,167 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+    {% block menu %}
+            <nav class="navbar navbar-fixed-top">
+                <div class="navbar-inverse">
+                    <div class="container-fluid">
+                        <!-- VERSÃO MOBILE -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand page-scroll" href="#home"><img src="http://billscontrol.com.br/img/logotipo-bills-control-escuro.png" title="Logotipo Bills Control" alt="logotipo bills control" class="img-responsive" width="120"></a>
+                        </div>
+                        <!-- LINKS -->
+                        <div class="collapse navbar-collapse menu" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a class="page-scroll" href="#como-funciona">COMO FUNCIONA</a></li>
+                                <li><a class="page-scroll" href="#duvidas">DÚVIDAS</a></li>
+                                <li><a href="http://billscontrol.com.br/comecar/">COMEÇAR</a></li>
+                                <li><a href="http://billscontrol.com.br/demo/">FAÇA O TESTE</a></li>
+                                <li><a href="#" id="loginButton1"><span>ACESSAR</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--BOX DE LOGIN -->
+                    <div id="loginContainer">
+                        <div style="clear:both"></div>
+                        <div id="loginBox">
+                            <form method="post" enctype="multipart/form-data" id="loginForm">
+                                <fieldset id="body">
+                                    <fieldset>
+                                        <label>Email</label>
+                                        <input type="text" class="form-control" autofocus name="login" />
+                                    </fieldset>
+                                    <fieldset>
+                                        <label>Senha</label>
+                                        <input type="password" class="form-control" name="senha" />
+                                    </fieldset>
+                                    <input type="submit" class="btn btn-primary btn-block" name="entrar" value="Entrar" />
+                                    <!--<span><a href="#">Esqueçeu sua senha?</a></span>-->
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+    {% endblock menu %}
+    <!-- BLOCO HOME -->
+    <div class="col-md-12 home">
+        <div class="col-md-12 home">
+            <h1 class="text-center">ESQUEÇA AS PLANILHAS</h1>
+            <h1 class="text-center">AGORA FICOU MAIS FÁCIL</h1>
+        </div>
+        <div class="col-md-12">
+            <img src="http://billscontrol.com.br/img/billscontrol.png" class="img-responsive" title="Carteira Virtual" alt="carteira virtual" />
+        </div>
+        <div class="col-md-12 home">
+            <h2 class="text-center">CONTROLE TODO SEU DINHEIRO DE MANEIRA SIMPLES</h2>
+        </div>
+        <div class="col-md-4"></div>
+        <div class="col-md-4 home botao-home">
+            <a href="http://billscontrol.com.br/comecar/" class="btn btn-block btn-default">COMEÇAR</a>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+    <!-- BLOCO COMO FUNCIONA -->
+    <div class="col-md-12 bg-info como-funciona" id="como-funciona">
+        <!-- PASSO 1 -->
+        <div class="col-md-12">
+            <h1 class="text-center">COMO FUNCIONA</h1>
+            <h2 class="text-center">Passo 1 - Cadastre-se no site e escolha um plano.</h2>
+        </div>
+        <div class="col-md-4"></div>
+        <div class="col-md-4 text-center">
+            <img src="http://billscontrol.com.br/img/icon-passo1.png" class="img-responsive" title="Imagem Cadastro" alt="imagem cadastro" />
+        </div>
+        <div class="col-md-4"></div>
+        <div class="col-md-12">
+            <p>Preencha alguns campos e começe agora mesmo a colocar sua vida financeira sob controle. Nunca foi tão fácil organizar seus gastos. <a href="comecar/">Começar agora!</a></p>
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-10 linha"></div>
+        <div class="col-md-1"></div>
+        <!-- PASSO 2 -->
+        <div class="col-md-12">
+            <h2 class="text-center">Passo 2 - Acesse o sistema e conheça suas funções.</h2>
+        </div>
+        <div class="col-md-4"></div>
+        <div class="col-md-4 text-center">
+            <img src="http://billscontrol.com.br/img/icon-passo2.png" class="img-responsive" title="Imagem Usuário" alt="imagem usuario" />
+        </div>
+        <div class="col-md-4"></div>
+        <div class="col-md-12">
+            <p>Utilize o menu de acesso no canto superior direito e entre com seus dados. Navegue pelo sistema e conheça suas funcionalidades.
+                Caso queira conhece-lo antes, faça um <a href="demo/">teste agora</a> e veja como o Bills é simples.</p>
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-10 linha"></div>
+        <div class="col-md-1"></div>
+        <!-- PASSO 3 -->
+        <div class="col-md-12">
+            <h2 class="text-center">Passo 3 - Adicione suas rendas, despesas e reservas.</h2>
+        </div>
+        <div class="col-md-4"></div>
+        <div class="col-md-4 text-center">
+            <img src="http://billscontrol.com.br/img/icon-passo3.png" class="img-responsive" title="Imagem Dinheiro" alt="imagem dinheiro" />
+        </div>
+        <div class="col-md-4"></div>
+        <div class="col-md-12">
+            <p>Adicione suas rendas de maneira simples, acrescente suas despesas e utilize a parte de reservas para investir em você.
+                Depois de tudo cadastrado você terá acesso a área de relatórios, onde poderá visualizar todas as transações feitas.</p>
+        </div>
+        <div class="col-md-12 text-center">
+            <h3><a href="http://billscontrol.com.br/comecar/">Comece a ter o controle financeiro que você sempre precisou!</a></h3>
+        </div>
+    </div>
+    <!-- BLOCO DÚVIDAS -->
+    <div class="col-md-12 duvidas" id="duvidas">
+        <div class="col-md-12">
+            <h1 class="text-center">DÚVIDAS</h1>
+            <h2 class="text-justify">Utilize os campos abaixo para esclarecer qualquer dúvida ou sugerir melhorias para nossa ferramenta.</h2>
+        </div>
+        <div class="col-md-6">
+            <form method="post" enctype="multipart/form-data">
+                            <div class="form-group">
+                    <label>Nome ou apelido</label>
+                    <input type="text" name="nome" autocomplete="off" class="form-control" required maxlength="255">
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" name="email" autocomplete="off" class="form-control" required maxlength="255">
+                </div>
+                <div class="form-group">
+                    <label>Celular</label>
+                    <input type="tel" name="celular" autocomplete="off" class="form-control" maxlength="20">
+                </div>
+                <div class="form-group">
+                    <label>Mensagem</label>
+                    <textarea class="form-control" name="mensagem" rows="5" maxlength="255"></textarea>
+                </div>
+                <div class="form-group botao-duvidas">
+                    <input type="submit" class="btn btn-default btn-block" name="enviar" value="ENVIAR">
+                </div>
+            </form>
+        </div>
+        <div class="col-md-6">
+            <p>Para você que não consegue economizar seu dinheiro de maneira alguma, nós podemos te ajudar.</p>
+            <p>Entre em contato conosco e saiba a respeito do Bills Control, essa é a hora de começar a investir em você mesmo.</p>
+            <p>Curta nossa <a href="https://www.facebook.com/jmessiasweb" target="_blank">fã page</a> e ajude a divulgar esse trabalho.</p>
+            <div class="fa-page">
+                <div class="fb-like-box" data-href="https://www.facebook.com/jmessiasweb" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true"></div>
+            </div>
+        </div>
+    </div>
+    <!-- RODAPÉ -->
+    <div class="col-md-1"></div>
+    <div class="col-md-10 linha-rodape"></div>
+    <div class="col-md-1"></div>
+    <footer>
+        <p class="col-md-12 text-center">
+            <a href="http://jmessias.com.br" target="_blank">Jmessi@s</a> 2017 | DIREITOS RESERVADOS
+        </p>
+    </footer>
+{% endblock conteudo %}
