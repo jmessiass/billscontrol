@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'home',
+    'billscontrol',
 ]
 
 MIDDLEWARE = [
@@ -115,3 +116,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/dev/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATIC_ROOT = '%s/static/' % BASE_DIR
+
+# Media Root e URL para upload de imagem
+
+MEDIA_URL = '/static/media/'
+
+MEDIA_ROOT = '%s/static/media/' % BASE_DIR
