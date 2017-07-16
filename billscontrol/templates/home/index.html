@@ -12,60 +12,41 @@
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                             </button>
-                            <a class="navbar-brand page-scroll" href="#home"><img src="http://billscontrol.com.br/img/logotipo-bills-control-escuro.png" title="Logotipo Bills Control" alt="logotipo bills control" class="img-responsive" width="120"></a>
+                            <a class="navbar-brand page-scroll" href="#home"><img src="/static/img/logotipo-bills-control-escuro.png" title="Logotipo Bills Control" alt="logotipo bills control" class="img-responsive" width="120"></a>
                         </div>
                         <!-- LINKS -->
                         <div class="collapse navbar-collapse menu" id="bs-example-navbar-collapse-1">
                             <ul class="nav navbar-nav navbar-right">
                                 <li><a class="page-scroll" href="#como-funciona">COMO FUNCIONA</a></li>
                                 <li><a class="page-scroll" href="#duvidas">DÚVIDAS</a></li>
-                                <!--<li><a href="http://billscontrol.com.br/comecar/">COMEÇAR</a></li>
-                                <li><a href="http://billscontrol.com.br/demo/">FAÇA O TESTE</a></li>
-                                <li><a href="#" id="loginButton1"><span>ACESSAR</span></a></li>-->
                             </ul>
-                        </div>
-                    </div>
-                    <!--BOX DE LOGIN -->
-                    <div id="loginContainer">
-                        <div style="clear:both"></div>
-                        <div id="loginBox">
-                            <form method="post" enctype="multipart/form-data" id="loginForm">
-                                <fieldset id="body">
-                                    <fieldset>
-                                        <label>Email</label>
-                                        <input type="text" class="form-control" autofocus name="login" />
-                                    </fieldset>
-                                    <fieldset>
-                                        <label>Senha</label>
-                                        <input type="password" class="form-control" name="senha" />
-                                    </fieldset>
-                                    <input type="submit" class="btn btn-primary btn-block" name="entrar" value="Entrar" />
-                                    <!--<span><a href="#">Esqueçeu sua senha?</a></span>-->
-                                </fieldset>
-                            </form>
                         </div>
                     </div>
                 </div>
             </nav>
     {% endblock menu %}
-    <!-- BLOCO HOME -->
-    <div class="col-md-12 home">
+    {% if  dados_home %}
+        <!-- BLOCO HOME -->
         <div class="col-md-12 home">
-            <h1 class="text-center">ESQUEÇA AS PLANILHAS</h1>
-            <h1 class="text-center">AGORA FICOU MAIS FÁCIL</h1>
+            <div class="col-md-12 home">
+                <h1 class="text-center">{{ dados_home.texto_1 }}</h1>
+                <h1 class="text-center">{{ dados_home.texto_2 }}</h1>
+            </div>
+            <div class="col-md-12">
+                <img src="/static/img/billscontrol.png" class="img-responsive" title="Carteira Virtual" alt="carteira virtual" />
+            </div>
+            <div class="col-md-12 home">
+                <h2 class="text-center">{{ dados_home.texto_3 }}</h2>
+            </div>
+            <div class="col-md-4"></div>
+            <div class="col-md-4 home botao-home">
+                <a href="{% url 'admin:index' %}" class="btn btn-block btn-default">ACESSAR</a>
+            </div>
+            <div class="col-md-4"></div>
         </div>
-        <div class="col-md-12">
-            <img src="/static/img/billscontrol.png" class="img-responsive" title="Carteira Virtual" alt="carteira virtual" />
-        </div>
-        <div class="col-md-12 home">
-            <h2 class="text-center">CONTROLE TODO SEU DINHEIRO DE MANEIRA SIMPLES</h2>
-        </div>
-        <div class="col-md-4"></div>
-        <div class="col-md-4 home botao-home">
-            <a href="{% url 'admin:index' %}" class="btn btn-block btn-default">COMEÇAR</a>
-        </div>
-        <div class="col-md-4"></div>
-    </div>
+    {% else %}
+        Sorry
+    {% endif %}
     <!-- BLOCO COMO FUNCIONA -->
     <div class="col-md-12 bg-info como-funciona" id="como-funciona">
         <!-- PASSO 1 -->
@@ -75,7 +56,7 @@
         </div>
         <div class="col-md-4"></div>
         <div class="col-md-4 text-center">
-            <img src="http://billscontrol.com.br/img/icon-passo1.png" class="img-responsive" title="Imagem Cadastro" alt="imagem cadastro" />
+            <img src="/static/img/icon-passo1.png" class="img-responsive" title="Imagem Cadastro" alt="imagem cadastro" />
         </div>
         <div class="col-md-4"></div>
         <div class="col-md-12">
@@ -90,7 +71,7 @@
         </div>
         <div class="col-md-4"></div>
         <div class="col-md-4 text-center">
-            <img src="http://billscontrol.com.br/img/icon-passo2.png" class="img-responsive" title="Imagem Usuário" alt="imagem usuario" />
+            <img src="/static/img/icon-passo2.png" class="img-responsive" title="Imagem Usuário" alt="imagem usuario" />
         </div>
         <div class="col-md-4"></div>
         <div class="col-md-12">
@@ -106,7 +87,7 @@
         </div>
         <div class="col-md-4"></div>
         <div class="col-md-4 text-center">
-            <img src="http://billscontrol.com.br/img/icon-passo3.png" class="img-responsive" title="Imagem Dinheiro" alt="imagem dinheiro" />
+            <img src="/static/img/icon-passo3.png" class="img-responsive" title="Imagem Dinheiro" alt="imagem dinheiro" />
         </div>
         <div class="col-md-4"></div>
         <div class="col-md-12">
@@ -150,9 +131,6 @@
             <p>Para você que não consegue economizar seu dinheiro de maneira alguma, nós podemos te ajudar.</p>
             <p>Entre em contato conosco e saiba a respeito do Bills Control, essa é a hora de começar a investir em você mesmo.</p>
             <p>Curta nossa <a href="https://www.facebook.com/jmessiasweb" target="_blank">fã page</a> e ajude a divulgar esse trabalho.</p>
-            <!--<div class="fa-page">
-                <div class="fb-like-box" data-href="https://www.facebook.com/jmessiasweb" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true"></div>
-            </div>-->
         </div>
     </div>
     <!-- RODAPÉ -->
